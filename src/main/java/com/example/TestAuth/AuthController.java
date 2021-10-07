@@ -11,7 +11,6 @@ public class AuthController {
 
     @PreAuthorize("hasPermission(#request, 'buildingService.addBuilding')")
     @GetMapping("/test")
-    //@PreAuthorize("#test()")
     public String getAuth(HttpServletRequest request) {
         System.out.println(request.getHeader("user-role").toString());
         System.out.println("Called!!!");
